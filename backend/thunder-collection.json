@@ -1,0 +1,133 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Idea Platform Auth",
+  "dateExported": "2025-08-25 05:50:36.623816",
+  "folders": [],
+  "requests": [
+    {
+      "name": "Health",
+      "url": "http://localhost:5000/api/health",
+      "method": "GET"
+    },
+    {
+      "name": "Register",
+      "url": "http://localhost:5000/api/auth/register",
+      "method": "POST",
+      "body": {
+        "type": "json",
+        "raw": {
+          "name": "Ada Lovelace",
+          "email": "ada@example.com",
+          "password": "Password!234",
+          "role": "Thinker",
+          "roleInfo": {
+            "industry": "FinTech",
+            "ideaStage": "Prototype"
+          }
+        }
+      }
+    },
+    {
+      "name": "Verify Email (GET)",
+      "url": "http://localhost:5000/api/auth/verify-email?token={{VERIFY_TOKEN}}",
+      "method": "GET"
+    },
+    {
+      "name": "Login",
+      "url": "http://localhost:5000/api/auth/login",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": {
+          "email": "ada@example.com",
+          "password": "Password!234"
+        }
+      }
+    },
+    {
+      "name": "Refresh",
+      "url": "http://localhost:5000/api/auth/refresh",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": {
+          "userId": "{{USER_ID}}"
+        }
+      }
+    },
+    {
+      "name": "Logout",
+      "url": "http://localhost:5000/api/auth/logout",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": {
+          "userId": "{{USER_ID}}"
+        }
+      }
+    },
+    {
+      "name": "Forgot Password",
+      "url": "http://localhost:5000/api/auth/forgot-password",
+      "method": "POST",
+      "body": {
+        "type": "json",
+        "raw": {
+          "email": "ada@example.com"
+        }
+      }
+    },
+    {
+      "name": "Reset Password",
+      "url": "http://localhost:5000/api/auth/reset-password",
+      "method": "POST",
+      "body": {
+        "type": "json",
+        "raw": {
+          "token": "{{RESET_TOKEN}}",
+          "newPassword": "NewPassword!234"
+        }
+      }
+    },
+    {
+      "name": "Protected /me",
+      "url": "http://localhost:5000/api/protected/me",
+      "method": "GET",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ACCESS_TOKEN}}"
+        }
+      ]
+    },
+    {
+      "name": "Protected /mentor",
+      "url": "http://localhost:5000/api/protected/mentor",
+      "method": "GET",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ACCESS_TOKEN}}"
+        }
+      ]
+    }
+  ]
+}

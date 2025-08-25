@@ -1,0 +1,17 @@
+cat > .gitignore << 'EOF'
+# Global
+.DS_Store
+*.log
+node_modules
+dist
+build
+
+# Env/Secrets
+.env
+.env.*.local
+backend/.env
+frontend/.env
+
+# Vite
+frontend/.vite
+EOF
