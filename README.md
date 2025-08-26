@@ -1,4 +1,44 @@
-Investor-Client meet
+**Investor-Client Meet:**
 
-This app/site is specially focused on Startup Business ideas. It will help the investor to find the founder and the founder can show their potential.
-It is an user friendly and secured site which makes the users idea's not to go our of their hand and we will make it legal. Though it is still in progress, we are focusing to make it more precise.
+🚀 A production-ready authentication and onboarding module for a startup idea platform.
+Supports **Thinkers (idea creators), Investors (funders), and Mentors (experts)**.
+
+## 🔐 Features
+- Signup/Login with 3 roles (Thinker, Investor, Mentor)
+- Email verification flow
+- Secure password hashing (bcrypt)
+- JWT-based access & refresh tokens
+- Role-based access control (RBAC)
+- Protected API routes
+- Forgot/Reset password (frontend + admin override script)
+- Modular backend (Express + MongoDB + Mongoose)
+- Frontend with React + Vite + TailwindCSS
+- Postman/Thunder client collection included
+
+## 🏗️ Tech Stack
+- **Frontend:** React.js, TailwindCSS, Vite
+- **Backend:** Node.js (Express.js), MongoDB (Mongoose)
+- **Auth:** JWT, bcrypt
+- **Security:** CORS, Helmet, dotenv
+
+## 🚀 Getting Started
+
+### Backend
+
+bash
+cd backend
+cp .env.example .env   # update values
+npm install
+npm run dev
+
+
+### Frontend
+
+cd frontend
+cp .env.example .env   # update values
+npm install
+npm run dev
+
+
+Frontend runs on http://localhost:5173
+Backend runs on http://localhost:5001
